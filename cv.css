@@ -96,13 +96,20 @@ body {
 
 #title-tab {
 
-	width: 10px;
+	width: 5px;
 	height: 60px;
 
-	left: 820px;
-	top: 45px;
+	left: 470px;
+	top: 110px;
 
 	animation: blinking 1.5s infinite;
+}
+
+#subtitle {
+	position: absolute;
+
+	left: 350px;
+	top: 150px;	
 }
 
 #face {
