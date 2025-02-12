@@ -130,5 +130,5 @@ body {
 	width: calc(var(--prop) * 200px);
 	height: 20px;
 
-	background-color: darkgrey;
+	background-image: linear-gradient(rgb(100, 100, 100), darkgrey);
 }
