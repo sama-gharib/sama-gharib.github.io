@@ -11,6 +11,7 @@ body {
 	background-color: rgb(50, 50, 50);
 }
 
+
 .round-rect {
 	position: absolute;
 	
@@ -31,7 +32,7 @@ body {
 	/* border: solid; */
 	border-color: red;
 
-	background-color: rgb(239, 233, 213);
+	background-color: rgb(255, 242, 242);
 
 	width: 1240px;
 	height: 1754px;
@@ -47,7 +48,8 @@ body {
 	height: 1754px;
 
 	/* border: solid; */
-	background-color: rgb(39, 68, 93);
+	/* background-color: rgb(39, 68, 93); */
+	background-color: rgb(120, 134, 199);
 
 	padding: 31px;
 
@@ -59,7 +61,7 @@ body {
 	position: relative;
 
 
-	background-color: rgb(113, 187, 178);
+	background-color: rgb(169, 181, 223);
 
 	left: -31px;
 	top: -31px;
@@ -116,8 +118,12 @@ body {
 	height: 20pc;
 }
 
+.milestone {
+	text-decoration: underline;
+}
+
 .precision {
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .gauge {
