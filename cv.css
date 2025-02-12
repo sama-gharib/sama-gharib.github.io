@@ -1,0 +1,120 @@
+@keyframes blinking {
+	0%   { visibility: 1; }
+	25%  { opacity: 0; }
+	50%  { opacity: 1; }
+	75%  { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+
+body {
+	background-color: rgb(50, 50, 50);
+}
+
+.round-rect {
+	position: absolute;
+	
+	width: 20px;
+	height: 100px;
+
+	background-color: rgb(39, 68, 93);
+
+	border-radius: 10pc;
+}
+
+#cv {
+	position: absolute;
+	
+	font-size: 24px;
+	font-family: monospace;
+
+	/* border: solid; */
+	border-color: red;
+
+	background-color: rgb(239, 233, 213);
+
+	width: 1240px;
+	height: 1754px;
+}
+
+#sidebar {
+	position: absolute;
+
+	left: 930px;
+	top: 0px;
+
+	width: 310px;
+	height: 1754px;
+
+	/* border: solid; */
+	background-color: rgb(39, 68, 93);
+
+	padding: 31px;
+
+	box-sizing: border-box;
+
+}
+
+#personnal-infos {
+	position: relative;
+
+
+	background-color: rgb(113, 187, 178);
+
+	left: -31px;
+	top: -31px;
+
+	width: 310px;
+	height: 350px;
+
+	padding: 31px;
+
+	box-sizing: border-box;
+}
+
+#mainframe {
+	position: absolute;
+
+	left: 0pc;
+	top: 0pc;
+
+	width: 930px;
+	height: 1754px;
+
+	padding-left: 24px;
+	padding-top: 24px;
+
+	box-sizing: border-box;
+}
+
+#title {
+	position: absolute;
+
+	left: 350px;
+	top: 17px;
+}
+
+#title-tab {
+
+	width: 10px;
+	height: 60px;
+
+	left: 820px;
+	top: 45px;
+
+	animation: blinking 1.5s infinite;
+}
+
+#face {
+	height: 20pc;
+}
+
+.gauge {
+
+	position: relative;
+
+	width: calc(var(--prop) * 200px);
+	height: 20px;
+
+	background-color: darkgrey;
+}
