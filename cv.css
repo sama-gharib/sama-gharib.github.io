@@ -29,7 +29,6 @@ body {
 	font-size: 24px;
 	font-family: monospace;
 
-	/* border: solid; */
 	border-color: red;
 
 	background-color: rgb(255, 242, 242);
@@ -47,8 +46,6 @@ body {
 	width: 310px;
 	height: 1754px;
 
-	/* border: solid; */
-	/* background-color: rgb(39, 68, 93); */
 	background-color: rgb(120, 134, 199);
 
 	padding: 31px;
