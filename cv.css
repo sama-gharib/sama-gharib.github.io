@@ -109,6 +109,10 @@ body {
 	height: 20pc;
 }
 
+.precision {
+	font-size: 16px;
+}
+
 .gauge {
 
 	position: relative;
