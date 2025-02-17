@@ -15,7 +15,8 @@ body {
 
 	font-size: 1.3vh;
 
-	background-color: rgb(250, 235, 235);
+	/*background-color: rgb(250, 235, 235);*/
+	background-image: linear-gradient(rgb(255, 235, 235), rgb(255, 230, 180));
 }
 
 p {
@@ -84,6 +85,7 @@ p {
 	text-align: left !important;
 }
 
+/*
 #left-triangle {
 	position: absolute;
 
@@ -105,6 +107,31 @@ p {
 	border-top: 15vh solid transparent;
 	border-bottom: 15vh solid transparent;
 	border-right: 50vh solid rgb(55, 155, 180);
+}
+*/
+
+#left-triangle {
+	position: absolute;
+
+	top: -9vh;
+
+    background-image: linear-gradient(rgb(240, 170, 120), rgb(200, 100, 75));
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    width: 50vh;
+    height: 30vh;
+}
+
+#right-triangle {
+	position: absolute;
+
+
+	right: 0vh;
+	top: -19vh;
+
+    background-image: linear-gradient(cyan, rgb(55, 155, 180));
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+    width: 50vh;
+    height: 30vh;
 }
 
 #vertical-separator {
