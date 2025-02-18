@@ -1,6 +1,14 @@
 body {
 	background-color: black;
+
+	width: 70vh;
+	height: 100vh;
 }
+
+a {
+	color: blue;
+}
+
 #cv {
 	position: absolute;
 
