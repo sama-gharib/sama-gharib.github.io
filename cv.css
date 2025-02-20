@@ -45,6 +45,7 @@ p {
 	position: relative;
 
 	left: 3vh;
+	bottom: 3vh;
 
 	width: 25vh;
 	height: 40vh;
@@ -55,7 +56,7 @@ p {
 
 
 	left: 37vh;
-	bottom: 40.8vh;
+	bottom: 43.8vh;
 
 	width: 25vh !important;
 
