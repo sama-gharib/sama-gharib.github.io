@@ -99,6 +99,15 @@ root.children[0].y = 100;
 const can = document.getElementById('skill-tree');
 const ctx = can.getContext('2d');
 
+let mousePosition = { x: 0, y: 0 };
+
+can.addEventListener('mousemove', evt => {
+  let rect = can.getBoundingClientRect();
+
+  mousePosition.x = evt.clientX - rect.left;
+  mousePosition.y = evt.clientY - rect.top;
+});
+
 function drawTree(node) {
 
   for (let child of node.children) {
@@ -112,44 +121,13 @@ function drawTree(node) {
   // ctx.fillRect(node.x - 5, node.y - 5, 10, 10);
   let measures = ctx.measureText(node.name);
   ctx.fillStyle = 'white';
-  ctx.fillRect(node.x - 15, node.y - 15, 30, 20);
+  ctx.fillRect(node.x - 15, node.y - 10, 30, 15);
   ctx.fillStyle = 'green';
   ctx.fillText(node.name, node.x - measures.width / 2, node.y);
 }
 
-function addVec(a, b) {
-  return {
-    x: a.x + b.x,
-    y: a.y + b.y
-  };
-}
-
-function scaleVec(a, f) {
-  return {
-    x: a.x * f,
-    y: a.y * f
-  };
-}
-
-function subVec(a, b) {
-  return addVec(a, scaleVec(b, -1));
-}
-
-function norm(a) {
-  return Math.sqrt(a.x * a.x + a.y * a.y);
-}
-
-function normalized(a) {
-  let n = norm(a);
-  if (n != 0) {
-    return scaleVec(a, 1 / norm(a));
-  } else {
-    return a;
-  }
-}
-
 function spring(a, b, l) {
-  
+
   let ab = { x: b.x - a.x, y: b.y - a.y };
   let norm = Math.sqrt(ab.x * ab.x + ab.y * ab.y);
   let abDir = { x: ab.x / norm, y: ab.y / norm };
@@ -157,7 +135,7 @@ function spring(a, b, l) {
 
   let bTarget = { x: target.x - b.x, y: target.y - b.y };
   let accel = { x: bTarget.x * SPRING_FORCE, y: bTarget.y * SPRING_FORCE };
-  
+
   b.ax += accel.x / 2;
   b.ay += accel.y / 2;
   // a.ax += -accel.x;
@@ -186,15 +164,16 @@ function nodesInteraction(a, b) {
   } else {
     repulsion(a, b, REPULSION_FACTOR);
   }
+
 }
 
 function slideNode(node) {
   node.vx = Math.min(100, node.vx);
   node.vy = Math.min(100, node.vy);
-  
+
   node.vx += node.ax;
   node.vy += node.ay;
-  
+
   let fx = node.x + node.vx;
   let fy = node.y + node.vy;
 
@@ -222,6 +201,9 @@ function forEachNode(node, f) {
 function simulate() {
   forEachNode(root, a => {
     forEachNode(root, b => nodesInteraction(a, b));
+
+    repulsion(a, mousePosition, REPULSION_FACTOR);
+
     slideNode(a);
   });
 }
