@@ -167,12 +167,17 @@
       <!-- infos on this website -->
       <h2>How ?</h2>
       <p>This website was made with Haskell! This Haskell code:</p>
-      <pre>nesting 0 = ul $ li "I'm nested!"
+      <pre>
+        nesting 0 = ul $ li "I'm nested!"
         nesting n = ul $ li (show n ++ nesting (n-1))
-        nesting 3</pre>
+        nesting 3
+      </pre>
       <p>Produces this HTML:</p>
-      <pre>&lt;ul&gt;&lt;li&gt;3&lt;ul&gt;&lt;li&gt;2&lt;ul&gt;&lt;li&gt;1&lt;ul&gt;&lt;li&gt;I'm
-        nested!&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</pre>
+      <pre>
+        &lt;ul&gt;&lt;li&gt;3&lt;ul&gt;&lt;li&gt;2&lt;ul&gt;&lt;li&gt;1&lt;ul&gt;&lt;li&gt;
+        I'm nested!
+        &lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;
+      </pre>
       <p>Which is formatted like so:</p>
       <ul>
         <li>3<ul>
@@ -186,10 +191,6 @@
           </ul>
         </li>
       </ul>
-      <h2>Is Haskell the best way to do web dev?</h2>
-      <p>No. But functional programming definitely has something to bring to the table in UI programming. I tried Elm
-        but this was a bit too much bloat for such a simple website. I would like to develop my own hobby web UI DSL at
-        some point in the future.</p>
     </div>
   </div>
   <!-- To switch page -->
